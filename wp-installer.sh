@@ -7,7 +7,7 @@
 current_directory=$PWD
 user=$(whoami)
 
-# instal wp cli
+# install wp cli
 if [ wp --info ]; then
   echo "Wp CLI is installed!"
   wp --info
