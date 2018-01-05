@@ -23,6 +23,8 @@ sudo chmod +x mysql.sh
 ```
 ./mysql.sh
 ```
+4. Save the Database name, Username and password as you need it on wp-installer.sh
+
 **Run The WP Installer Command**
 
 1. Move wp-installer.sh to current directory 
