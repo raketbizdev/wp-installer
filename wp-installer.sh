@@ -33,10 +33,31 @@ sudo mv wordpress/* $current_directory
 
 echo "Done Moving to: $current_directory"
 
+echo "Enter your domain URL"
+read url
+
+echo "Enter your Website Title"
+read title
+
+echo "Enter your Website admin User"
+read admin_user
+
+echo "Enter your Website admin Password"
+read admin_password
+
+echo "Enter your Website admin Email"
+read admin_email
+
+
+
+wp core install --url=${url} --title=biz --admin_user=${admin_user} --admin_password=${admin_password} --admin_email=${admin_emai}
+
 echo "Removing: wp-installer"
 sudo rm -rf wp-installer
 echo "Removed: wp-installer"
 
+
 echo "Removing: wp-installer.sh"
 sudo rm -rf wp-installer.sh
 echo "Remove: wp-installer.sh"
+
