@@ -40,9 +40,13 @@ echo "Enter your Website Title"
 read title
 
 echo "Enter your Website admin User"
+user=$(< /dev/urandom tr -dc _A-Z-a-z | head -c12)
+echo "Enter generated Username: $user or Create your own."
 read admin_user
 
 echo "Enter your Website admin Password"
+pass=$(< /dev/urandom tr -dc _A-Z-a-z | head -c12)
+echo "Enter generated Password: $pass or Create your own. "
 read admin_password
 
 echo "Enter your Website admin Email"
