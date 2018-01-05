@@ -6,17 +6,37 @@
 
 current_directory=$PWD
 user=www-data
-echo $current_directory
+
+echo "Downloading WP latest Files." 
+
 sudo wget https://wordpress.org/latest.tar.gz
+
+echo "Unzipping latest.tar.gz." 
 sudo tar -xzvf latest.tar.gz
+
+echo "latest.tar.gz to wordpress" 
+echo "Changing Permissions to 755" 
 sudo chmod 755 -R wordpress
-echo "Change Permision " 
+echo "Permision Change." 
+
+
+echo "Removing: latest.tar.gz"
 sudo rm -rf latest.tar.gz
 echo "Remove latest.tar.gz"
-sudo chown $user:$user -R wordpress
-echo "Change User Data to: $user"
-sudo mv wordpress $current_directory
 
-echo "Done installing WP to: $current_directory"
+echo "Change the User to Current User" 
+sudo chown $user:$user -R wordpress
+echo "User Data now: $user"
+
+echo "Moving to Current Directory" 
+sudo mv wordpress/* $current_directory
+
+echo "Done Extracting WP to: $current_directory"
+
+echo "Removing: wp-installer"
+sudo rm -rf wp-installer
+echo "Removed: wp-installer"
+
+echo "Removing: wp-installer.sh"
 sudo rm -rf wp-installer.sh
-echo "wp-installer.sh"
+echo "Remove: wp-installer.sh"
