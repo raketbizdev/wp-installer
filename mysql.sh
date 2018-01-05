@@ -2,6 +2,7 @@
 
 # sudo touch mysql.sh
 # sudo chmod 755 mysql.sh
+# sudo nano mysql.sh
 # ./mysql.sh
 
 # If /root/.my.cnf exists then it won't ask for root password
