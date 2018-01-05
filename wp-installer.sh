@@ -31,7 +31,7 @@ echo "User Data now: $user"
 echo "Moving to Current Directory" 
 sudo mv wordpress/* $current_directory
 
-echo "Done Extracting WP to: $current_directory"
+echo "Done Moving to: $current_directory"
 
 echo "Removing: wp-installer"
 sudo rm -rf wp-installer
