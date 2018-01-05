@@ -4,7 +4,7 @@
 # url: www.rakethost.ph
 
 
-current_directory=pwd
+current_directory=$PWD
 echo $current_directory
 sudo wget https://wordpress.org/latest.tar.gz
 sudo tar -xzvf latest.tar.gz
