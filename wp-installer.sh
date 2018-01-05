@@ -5,6 +5,7 @@
 
 
 current_directory=pwd
+echo $current_directory
 sudo wget https://wordpress.org/latest.tar.gz
 sudo tar -xzvf latest.tar.gz
 sudo chmod 755 -R wordpress
