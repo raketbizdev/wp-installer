@@ -8,8 +8,8 @@ current_directory=$PWD
 user=$(whoami)
 
 # install wp cli
-if [ wp --info ]; then
-  echo "Wp CLI is installed!"
+if [ -f /usr/local/bin/wp ]; then
+  echo "Wp CLI is already installed in this machine!"
   wp --info
 
 else
