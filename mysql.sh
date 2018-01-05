@@ -1,8 +1,10 @@
 #!/bin/bash
-# modified Version Script from Bash Saad Ismail - me@saadismail.net
+
 # Author name: Ruel Nopal
 # Company: RaketHost PH Inc.
 # url: www.rakethost.ph
+
+# modified Version Script from Saad Ismail - me@saadismail.net
 
 # sudo touch mysql.sh
 # sudo chmod 755 mysql.sh
