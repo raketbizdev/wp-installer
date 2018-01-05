@@ -1,25 +1,15 @@
 # WP Installer
 
+This bash is a wordpress and mysql database creator. This simple script comes in handy if you are using a non standard wordpress hosting like digitalocean or amazon aws where access to cpanel is not available.
+
 **How to use**
 
-1. Clone the code 
+
+Clone the code 
 ```
 sudo git clone https://github.com/radon1284/wp-installer.git
 ```
-2. Move wp-installer.sh to current directory 
-```
-sudo mv wp-installer/wp-installer.sh $PWD
-```
-3. Once move change the user permission to 775
-```
-sudo chmod +x wp-installer.sh
-```
-4. Run the command
-```
-./wp-installer.sh
-```
-
-**How to create database**
+**create database**
 
 1. Move mysql.sh to current directory
 ```
@@ -29,8 +19,21 @@ sudo mv wp-installer/mysql.sh $PWD
 ```
 sudo chmod +x mysql.sh
 ```
-4. Run the command
+3. Run the command
 ```
 ./mysql.sh
 ```
+**Run The WP Installer Command**
 
+1. Move wp-installer.sh to current directory 
+```
+sudo mv wp-installer/wp-installer.sh $PWD
+```
+2. Once move change the user permission to 775
+```
+sudo chmod +x wp-installer.sh
+```
+3. Run the command
+```
+./wp-installer.sh
+```
