@@ -14,7 +14,7 @@ echo "Change Permision "
 sudo rm -rf latest.tar.gz
 echo "Remove latest.tar.gz"
 sudo shown $user:$user -R wordpress
-echo "Change User Data to " $user
+echo "Change User Data to: $user"
 sudo mv wordpress $current_directory
 
 echo "Done installing WP to: $current_directory"
