@@ -3,7 +3,7 @@
 # Company: RaketHost PH Inc.
 # url: www.rakethost.ph
 
-
+echo "Most directory in newly created server is under \'/var/www/html/\'. if you created new user it will be \'/home/username/\'"
 current_directory=$PWD
 user=$(whoami)
 
@@ -103,6 +103,10 @@ echo "Removing: wp-installer"
 sudo rm -rf wp-installer
 echo "Removed: wp-installer"
 
+
+echo "Removing: mysql.sh"
+sudo rm -rf mysql.sh
+echo "Remove: mysql.sh"
 
 echo "Removing: wp-installer.sh"
 sudo rm -rf wp-installer.sh
