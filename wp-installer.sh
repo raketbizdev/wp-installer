@@ -10,3 +10,5 @@ sudo tar -xzvf latest.tar.gz
 sudo chmod 755 -R wordpress
 sudo shown www-data www-data -R wordpress
 sudo mv wordpress $current_directory
+
+echo "Done installing WP to: $current_directory"
