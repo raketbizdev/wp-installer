@@ -2,7 +2,8 @@
 
 **How to use**
 
-1. Clone the code `sudo git clone https://github.com/radon1284/wp-installer.git`
+1. Clone the code 
+```sudo git clone https://github.com/radon1284/wp-installer.git```
 2. Move wp-installer.sh to current directory 
 ```
 sudo mv wp-installer/wp-installer.sh $PWD
