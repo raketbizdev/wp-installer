@@ -7,6 +7,25 @@
 current_directory=$PWD
 user=$(whoami)
 
+# instal wp cli
+if [ wp --info ]; then
+  echo "Wp CLI is installed!"
+  wp --info
+
+else
+  echo "Installing WP CLI"
+  sudo wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+
+  echo "Change Permission of WP CLI"
+  sudo chmod +x wp-cli.phar
+
+  echo "Move wp-cli.phar /usr/local/bin/wp"
+  sudo mv wp-cli.phar /usr/local/bin/wp
+
+  wp --info
+  echo "WP Cli Successfully Installed!"
+fi
+
 echo "Downloading WP latest Files." 
 
 sudo wget https://wordpress.org/latest.tar.gz
@@ -56,6 +75,8 @@ echo "Database Prefix: ${dbprefix}"
 
 wp config create --dbname=${dbname} --dbuser=${dbuser} --dbpass=${dbpass} --dbprefix=${dbpass} --dbhost=${dbhost}
 
+echo "wp-config.php successfully created."
+
 echo "Enter your domain URL"
 read url
 
@@ -68,17 +89,15 @@ echo "Enter generated Username: $user or Create your own."
 read admin_user
 
 echo "Enter your Website admin Password"
-pass=$(< /dev/urandom tr -dc _A-Z-a-z | head -c12)
+pass=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c16)
 echo "Enter generated Password: $pass or Create your own. "
 read admin_password
 
 echo "Enter your Website admin Email"
 read admin_email
 
-
-
-
 wp core install --url=${url} --title=biz --admin_user=${admin_user} --admin_password=${admin_password} --admin_email=${admin_emai}
+echo "your wordpress is ready to rock goodluck."
 
 echo "Removing: wp-installer"
 sudo rm -rf wp-installer
