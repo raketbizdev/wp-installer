@@ -5,7 +5,7 @@
 
 
 current_directory=$PWD
-user=www-data
+user=$(whoami)
 
 echo "Downloading WP latest Files." 
 
