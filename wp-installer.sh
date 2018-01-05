@@ -33,6 +33,29 @@ sudo mv wordpress/* $current_directory
 
 echo "Done Moving to: $current_directory"
 
+echo "Enter the DB name you generated from Mysql.sh"
+read dbname
+echo "Databasename: ${dbname}"
+
+echo "Enter the DB User you generated from Mysql.sh"
+read dbuser
+echo "Username: ${dbuser}"
+
+echo "Enter the DB password you generated from Mysql.sh"
+read dbpass
+echo "Password: ${dbpass}"
+
+echo "Default DB Host: localhost"
+read dbhost
+echo "Database Host: ${dbhost}"
+
+echo "Default DB Prefix: wp_"
+read dbprefix
+echo "Database Prefix: ${dbprefix}"
+
+
+wp config create --dbname=${dbname} --dbuser=${dbuser} --dbpass=${dbpass} --dbprefix=${dbpass} --dbhost=${dbhost}
+
 echo "Enter your domain URL"
 read url
 
@@ -51,6 +74,7 @@ read admin_password
 
 echo "Enter your Website admin Email"
 read admin_email
+
 
 
 
